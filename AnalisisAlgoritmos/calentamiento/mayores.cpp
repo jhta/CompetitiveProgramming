@@ -4,8 +4,12 @@ int main(){
 
 int x;
 cin>>x;
-for(int i=1;i<=x;i++)
-    cout<<"Hello world!\n";
-
+while(x--){
+    int a,b;
+    cin>>a>>b;
+    if(a>b)cout<<">"<<endl;
+    else if(a>b)cout<<"<"<<endl;
+    else cout<<"="<<endl;
+}
 return 0;
 }

@@ -1,0 +1,27 @@
+ 
+import java.io.*;
+import java.util.*;
+ 
+ 
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+ 		HashMap<String, String> H= new HashMap<>();
+ 		H.put( "HOLA","ESPANOL");
+ 		H.put( "HELLO","INGLES");
+ 		H.put( "HALLO","ALEMAN");
+ 		H.put( "BONJOUR","FRANCES");
+ 		H.put("CIAO","ITALIANO" );
+ 		H.put("ZDRAVSTVUJTE","RUSO" );
+        String s;
+        int i=0;
+        while((s=read.readLine())!=null){
+            if(s.equals("#"))break;
+ 	          System.out.print("Palabra "+(++i)+": ");
+            System.out.println((!(H.containsKey(s)))? "DESCONOCIDO" : H.get(s)); 
+            
+        }
+ 
+    }
+}
